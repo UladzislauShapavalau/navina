@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Arrow" transform="translate(0 -0.173)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 0.173)" fill="rgba(0,0,0,0)" stroke="#000" stroke-linejoin="round" stroke-width="1">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11.5" fill="none"/>
+    </g>
+    <path id="Arrow-2" data-name="Arrow" d="M223.67,408,230,402l-6.331-6-.67,1.354L227.9,402l-4.9,4.646Z" transform="translate(-214 -389.526)"/>
+  </g>
+</svg>
