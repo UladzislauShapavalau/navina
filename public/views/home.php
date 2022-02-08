@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/public/css/main.css">
     <meta http-equiv="Content-Language" content="pl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="./js/index.js" async></script>
+    <script type="text/javascript" src="/public/js/index.js" async></script>
     <title>Novina</title>
 </head>
 
@@ -20,21 +20,22 @@
             <div class="header-inner">
                 <div class="header-top">
                     <div class="header-logo">
-                        <img src="img/logo-center.svg" alt="" />
+                        <img src="/public/img/logo-center.svg" alt="" />
                     </div>
                     <div class="header-logowanie">
 
-                        <a class="header-link"><img class="user-icon" src="img/user.png" alt="" />Zaloguj
+                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png"
+                                alt="" />Zaloguj
                             si&#281;</a>
                     </div>
                 </div>
 
                 <div class="nav-background">
                     <nav class="nav-btn">
-                        <a class="nav-link" href="new.html">Najnowsze</a>
-                        <a class="nav-link" href="shops.html">Sklepy</a>
-                        <a class="nav-link" href="liked.html">Ulubione</a>
-                        <a class="nav-link" href="categories.html">Kategorie</a>
+                        <a class="nav-link" href="/new">Najnowsze</a>
+                        <a class="nav-link" href="/shops">Sklepy</a>
+                        <a class="nav-link" href="/liked">Ulubione</a>
+                        <a class="nav-link" href="/categories">Kategorie</a>
                     </nav>
                 </div>
             </div>
@@ -53,11 +54,11 @@
                 <div class="cards-wrapper">
                     <div class="card">
                         <div class="upper-section">
-                            <img src="./img/gazetki/biedronka.jpg" />
+                            <img src="/public/img/gazetki/biedronka.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Biedronka</span>
@@ -67,11 +68,11 @@
                     </div>
                     <div class="card">
                         <div class="upper-section">
-                            <img src="./img/gazetki/biedronka.jpg" />
+                            <img src="/public/img/gazetki/biedronka.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Biedronka</span>
@@ -81,11 +82,11 @@
                     </div>
                     <div class="card">
                         <div class="upper-section">
-                            <img src="./img/gazetki/biedronka.jpg" />
+                            <img src="/public/img/gazetki/biedronka.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Biedronka</span>
@@ -95,11 +96,11 @@
                     </div>
                     <div class="card">
                         <div class="upper-section">
-                            <img src="./img/gazetki/biedronka.jpg" />
+                            <img src="/public/img/gazetki/biedronka.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Biedronka</span>
@@ -107,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn-more" href="/new.html">Wi&#281;cej</a>
+                    <a class="btn-more" href="/new">Wi&#281;cej</a>
                 </div>
             </section>
         </section>
@@ -120,11 +121,11 @@
                 <div class="cards-wrapper">
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="./img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/auchan-logo.png" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Auchan</span>
@@ -133,11 +134,11 @@
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="./img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/auchan-logo.png" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Biedronka</span>
@@ -146,11 +147,11 @@
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="./img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/auchan-logo.png" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Ikea</span>
@@ -159,11 +160,11 @@
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="./img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/auchan-logo.png" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
-                                <img src="./img/arrow.svg" />
+                                <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
                                 <span class="shop-name">Jysk</span>
@@ -171,7 +172,7 @@
                         </div>
                     </div>
 
-                    <a class="btn-more" href="shops.html">Wi&#281;cej</a>
+                    <a class="btn-more" href="/shops">Wi&#281;cej</a>
                 </div>
             </section>
 

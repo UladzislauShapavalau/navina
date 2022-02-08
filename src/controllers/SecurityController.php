@@ -33,7 +33,7 @@ class SecurityController extends AppController
         }
 
         setcookie('userId', $user->getId(), time() + (86400 * 30), "/");
-        $_SESSION['userId'] = $user->getId();
+        $_COOKIE['userId'] = $user->getId();
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: $url/feed");
@@ -62,7 +62,7 @@ class SecurityController extends AppController
         $user = $userRepository->getUser($email);
 
         setcookie('userId', $user->getId(), time() + (86400 * 30), "/");
-        $_SESSION['userId'] = $user->getId();
+        $_COOKIE['userId'] = $user->getId();
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: $url/feed");
@@ -70,7 +70,7 @@ class SecurityController extends AppController
 
     public function logout()
     {
-        unset($_SESSION['userId']);
+        unset($_COOKIE['userId']);
         setcookie("userId", "", time() - 3600);
 
         $url = "http://$_SERVER[HTTP_HOST]";
