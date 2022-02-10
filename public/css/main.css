@@ -41,6 +41,7 @@ body{
     text-decoration: none;
     display: flex;
     align-items: flex-end;
+    color:#000;
 }
 
 .header-logowanie {
@@ -247,7 +248,7 @@ max-height: fit-content;
     margin: 0 auto 30px auto;
 }
 
-.input:nth-child(2) {
+.input:nth-child(3) {
     margin-top: 20px;
 }
 
@@ -272,6 +273,7 @@ max-height: fit-content;
     padding-left: 50px;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
@@ -300,4 +302,5 @@ max-height: fit-content;
     margin: auto;
     margin-top: 14px;
     font-weight: bold;
+    text-decoration:none;
 }

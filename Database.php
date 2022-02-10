@@ -17,7 +17,8 @@ class Database
         $this->database = DATABASE;
     }
 
-    public function connect() {
+    public function connect()
+    {
         try {
             $conn = new PDO(
                 "pgsql:host=$this->host;port=5432;dbname=$this->database",
@@ -28,9 +29,8 @@ class Database
 
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
-
-        } catch(PDOException $e) {
-            die("Connection failed: ".$e->getMessage());
+        } catch (PDOException $e) {
+            die("Connection failed: " . $e->getMessage());
         }
     }
 }

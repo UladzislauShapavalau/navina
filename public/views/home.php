@@ -24,8 +24,7 @@
                     </div>
                     <div class="header-logowanie">
 
-                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png"
-                                alt="" />Zaloguj
+                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png" alt="" />Zaloguj
                             si&#281;</a>
                     </div>
                 </div>

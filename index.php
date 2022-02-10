@@ -8,8 +8,13 @@ $method = trim($_SERVER['REQUEST_URI'], '/');
 
 Router::get('', 'DefaultController');
 Router::get('home', 'DefaultController');
+Router::get('new', 'DefaultController');
+Router::get('liked', 'DefaultController');
+Router::get('shops', 'DefaultController');
+Router::get('categories', 'DefaultController');
+Router::get('pepper', 'DefaultController');
 Router::get('logout', 'SecurityController');
 Router::post('login', 'SecurityController');
-Router::post('register', 'SecurityController');
+Router::post('registration', 'SecurityController');
 
 Router::run($path, $method);

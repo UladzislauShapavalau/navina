@@ -32,46 +32,45 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ["Email or password is incorrect"]]);
         }
 
-        setcookie('userId', $user->getId(), time() + (86400 * 30), "/");
-        $_COOKIE['userId'] = $user->getId();
+        setcookie('user_id', $user->getId(), time() + (86400 * 30), "/");
+        $_COOKIE['user_id'] = $user->getId();
 
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: $url/feed");
+        header("Location: $url/");
     }
 
-    public function register()
+    public function registration()
     {
         if (!$this->isPost()) {
-            return $this->render('register');
+            return $this->render('registration');
         }
 
         $userRepository = new UserRepository();
 
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $name = $_POST['name'];
-        $surname = $_POST['surname'];
+        $name = $_POST['login'];
 
         $user = $userRepository->getUser($email);
 
         if ($user) {
-            return $this->render('register', ['messages' => ["This email is already used"]]);
+            return $this->render('registration', ['messages' => ["This email is already used"]]);
         }
 
-        $userRepository->addUser($name, $surname, $email, $password);
+        $userRepository->addUser($name, $email, $password);
         $user = $userRepository->getUser($email);
 
-        setcookie('userId', $user->getId(), time() + (86400 * 30), "/");
-        $_COOKIE['userId'] = $user->getId();
+        setcookie('user_id', $user->getId(), time() + (86400 * 30), "/");
+        $_COOKIE['user_id'] = $user->getId();
 
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: $url/feed");
+        header("Location: $url/");
     }
 
     public function logout()
     {
-        unset($_COOKIE['userId']);
-        setcookie("userId", "", time() - 3600);
+        unset($_COOKIE['user_id']);
+        setcookie("user_id", "", time() - 3600);
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: $url");

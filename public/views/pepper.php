@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/public/css/main.css">
     <meta http-equiv="Content-Language" content="pl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="./js/index.js" async></script>
+    <script type="text/javascript" src="/public/js/index.js" async></script>
     <title>Novina</title>
 </head>
 
@@ -20,30 +20,23 @@
             <div class="header-inner">
                 <div class="header-top">
                     <div class="header-logo">
-                        <img src="img/logo-center.svg" alt="" />
+                        <img src="/public/img/logo-center.svg" alt="" />
                     </div>
                     <div class="header-logowanie">
-
-                        <a class="header-link"><img class="user-icon" src="img/user.png" alt="" />Zaloguj
-                            si&#281;</a>
+                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png" alt="" />Zaloguj
+                            si&#281;
+                        </a>
                     </div>
                 </div>
 
                 <div class="nav-background">
                     <nav class="nav-btn">
-                        <a class="nav-link" href="new.html">Najnowsze</a>
-                        <a class="nav-link" href="shops.html">Sklepy</a>
-                        <a class="nav-link" href="liked.html">Ulubione</a>
-                        <a class="nav-link" href="categories.html">Kategorie</a>
+                        <a class="nav-link" href="/new">Najnowsze</a>
+                        <a class="nav-link" href="/shops">Sklepy</a>
+                        <a class="nav-link" href="/liked">Ulubione</a>
+                        <a class="nav-link" href="/categories">Kategorie</a>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-
-
-
-    <footer class="footer"></footer>
-</body>
-
-</html>
