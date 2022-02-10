@@ -200,7 +200,7 @@ max-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    padding: 30px;
     background-color: white;
     background-size: cover;
     background-position: center;

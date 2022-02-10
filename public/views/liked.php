@@ -23,8 +23,14 @@
                         <img src="/public/img/logo-center.svg" alt="" />
                     </div>
                     <div class="header-logowanie">
-                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png" alt="" />Zaloguj
-                            si&#281;</a>
+                        <?php if (isset($_COOKIE['user_id'])) : ?>
+                            Hello, <?= $user->getName(); ?>
+                        <?php else : ?>
+                            <a class="header-link" href="/login">
+                                <img class="user-icon" src="/public/img/user.png" alt="" />
+                                Zaloguj si&#281;
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
 

@@ -32,7 +32,7 @@
     </header>
 
     <main>
-        <section class="login-container">
+        <form action="registration" method="POST" class="login-container">
             <span class="login-text"> Zarejestruj si&#281; przez e-mail</span>
             <div class="messages">
                 <?php
@@ -43,12 +43,12 @@
                 }
                 ?>
             </div>
-            <input type="text" class="input" placeholder="Nickname" />
-            <input type="email" class="input" placeholder="E-mail" />
-            <input type="password" class="input" placeholder="Has&#322;o" />
-            <div class="btn-reg" href="#">Zarejestruj si&#281;</div>
+            <input name="login" type="text" class="input" placeholder="Nickname" />
+            <input name="email" type="email" class="input" placeholder="E-mail" />
+            <input name="password" type="password" class="input" placeholder="Has&#322;o" />
+            <button class="btn-reg" href="#">Zarejestruj si&#281;</button>
             <a class="login-botton" href="/login">Masz konto? Zaloguj si&#281;</a>
-        </section>
+        </form>
     </main>
 
 

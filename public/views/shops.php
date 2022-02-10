@@ -23,9 +23,14 @@
                         <img src="/public/img/logo-center.svg" alt="" />
                     </div>
                     <div class="header-logowanie">
-                        <a class="header-link" href="/login"><img class="user-icon" src="/public/img/user.png" alt="" />Zaloguj
-                            si&#281;
-                        </a>
+                        <?php if (isset($_COOKIE['user_id'])) : ?>
+                            Hello, <?= $user->getName(); ?>
+                        <?php else : ?>
+                            <a class="header-link" href="/login">
+                                <img class="user-icon" src="/public/img/user.png" alt="" />
+                                Zaloguj si&#281;
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -62,7 +67,7 @@
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="/public/img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/Biedronka-logo.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
@@ -75,53 +80,53 @@
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="/public/img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/castorama_logo.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Ikea</span>
+                                <span class="shop-name">Castorama</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="/public/img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/Lidl-Logo.png" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Jysk</span>
+                                <span class="shop-name">Lidl</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="/public/img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/rossman_logo.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Auchan</span>
+                                <span class="shop-name">Rossman</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-shop">
                         <div class="upper-section">
-                            <img src="/public/img/shop/auchan-logo.png" />
+                            <img src="/public/img/shop/mediamarkt.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
+                                <span class="shop-name">Mediamarkt</span>
                             </div>
                         </div>
                     </div>
