@@ -3,6 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/User.php';
 require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__ . '/../repository/PaperRepository.php';
 
 class DefaultController extends AppController
 {
@@ -33,10 +34,11 @@ class DefaultController extends AppController
     public function new()
     {
         $userRepository = new UserRepository();
+        $paperRepository = new PaperRepository();
 
         if (isset($_COOKIE['user_id'])) {
             $user = $userRepository->getUserById($_COOKIE['user_id']);
-            $this->render('new', ['user' => $user]);
+            $this->render('new', ['user' => $user, 'papers' => $paperRepository->getPaper()]);
         } else {
             $this->render('new');
         }
@@ -78,15 +80,28 @@ class DefaultController extends AppController
         }
     }
 
-    public function pepper()
+    public function paper()
+    {
+
+
+        $this->render('paper');
+    }
+
+    public function getpaper()
+    {
+        $paperRepository = new PaperRepository();
+        $this->render('paper', ['user' => $this->getUser(), 'paper' => $paperRepository->getById($_GET['id'])]);
+    }
+
+    private function getUser(): ?User
     {
         $userRepository = new UserRepository();
 
         if (isset($_COOKIE['user_id'])) {
             $user = $userRepository->getUserById($_COOKIE['user_id']);
-            $this->render('pepper', ['user' => $user]);
+            return $user;
         } else {
-            $this->render('pepper');
+            return null;
         }
     }
 }

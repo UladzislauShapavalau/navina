@@ -59,29 +59,29 @@
                 <div class="cards-wrapper">
                     <div class="card">
                         <div class="upper-section">
-                            <img src="/public/img/gazetki/biedronka.jpg" />
+                            <img src="/public/papers/auchan/auchan_1002_1602.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
-                                <span>9.11 - 4.12</span>
+                                <span class="shop-name">Auchan</span>
+                                <span>10.02 - 16.02</span>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="upper-section">
-                            <img src="/public/img/gazetki/biedronka.jpg" />
+                            <img src="/public/papers/mediamarkt/mediamarkt_0902_1502.jpg" />
                         </div>
                         <div class="lower-section">
                             <div class="image-container">
                                 <img src="/public/img/arrow.svg" />
                             </div>
                             <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
-                                <span>9.11 - 4.12</span>
+                                <span class="shop-name">Mediamarkt</span>
+                                <span>09.02 - 15.02</span>
                             </div>
                         </div>
                     </div>

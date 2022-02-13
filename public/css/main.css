@@ -91,55 +91,46 @@ body{
     
 }
 
-:root {
---primary-bg-color: #fafafa;
---secondary-bg-color: #f3d5b5;
---primary-text-color: #a47148;
---secondary-text-color: #000;
---gray-text-color: #7f7f7f;
---primary-black: 0, 0, 0;
---alpha: 0.5;
-}
-
 body {
-background-color: var(--primary-bg-color);
-height: 100%;
-width: 100%;
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 100%;
 }
 
 .wrapper {
-display: flex;
+    display: flex;
 }
 
 .page-container {
-display: flex;
-flex-direction: column;
-flex: 1;
-padding-top: 20px;
-max-width: 1130px;
-margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 20px;
+    max-width: 1130px;
+    margin: auto;
 }
 
 .cards-wrapper {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
 
 .card {
-height: 430px;
-width: 250px;
-margin: 10px;
-cursor: pointer;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 15px;
-background-color: white;
-background-size: cover;
-background-position: center;
-color: var(--secondary-text-color);
+    height: 430px;
+    width: 250px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-text-color);
+    text-decoration: none;
 }
 
 .card h5 {
@@ -147,9 +138,13 @@ font-size: 18px;
 }
 
 .upper-section img {
-max-width: 100%;
-max-height: fit-content;
-/* max-height: 350px; */
+    max-width: 100%;
+    /* max-height: fit-content; */
+    max-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .lower-section {
@@ -303,4 +298,14 @@ max-height: fit-content;
     margin-top: 14px;
     font-weight: bold;
     text-decoration:none;
+}
+
+.view-paper{
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px; 
+    height: 600px;
 }

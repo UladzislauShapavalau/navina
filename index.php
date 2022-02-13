@@ -12,9 +12,10 @@ Router::get('new', 'DefaultController');
 Router::get('liked', 'DefaultController');
 Router::get('shops', 'DefaultController');
 Router::get('categories', 'DefaultController');
-Router::get('pepper', 'DefaultController');
+Router::get('paper', 'DefaultController');
 Router::get('logout', 'SecurityController');
 Router::post('login', 'SecurityController');
 Router::post('registration', 'SecurityController');
+Router::get('getpaper', 'DefaultController');
 
 Router::run($path, $method);
