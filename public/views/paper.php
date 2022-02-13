@@ -45,32 +45,11 @@
             </div>
         </div>
     </header>
-
     <main>
-        <section class="section">
-            <section class="page-container">
-                <div class="cards-wrapper">
-                    <?php foreach ($papers as $paper) : ?>
-                        <a class="card" href="/getpaper?id=<?php echo $paper->getId($_GET['id']) ?>">
-                            <div class=" upper-section">
-                                <img src="<?php echo $paper->getImageLink() ?>" />
-                            </div>
-                            <div class="lower-section">
-                                <div class="image-container">
-                                    <img src="/public/img/arrow.svg" />
-                                </div>
-                                <div class="info-container">
-                                    <span class="shop-name"><?php echo $paper->getShopName() ?></span>
-                                    <span>9.11 - 4.12</span>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endforeach ?>
-                </div>
-            </section>
-        </section>
+        <iframe class="view-paper" src=<?php echo $paper->getPdfPath() ?> frameborder="0">Your browser does not support frames</iframe>
     </main>
-
 
     <footer class="footer"></footer>
 </body>
+
+</html>
