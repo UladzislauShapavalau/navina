@@ -19,9 +19,9 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-top">
-                    <div class="header-logo">
+                    <a href="/" class="header-logo">
                         <img src="/public/img/logo-center.svg" alt="" />
-                    </div>
+                    </a>
                     <div class="header-logowanie">
                         <?php if (isset($_COOKIE['user_id'])) : ?>
                             Hello, <?= $user->getName(); ?>

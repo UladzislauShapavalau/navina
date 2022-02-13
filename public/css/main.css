@@ -199,6 +199,7 @@ font-size: 18px;
     background-color: white;
     background-size: cover;
     background-position: center;
+    text-decoration: none;
     color: var(--secondary-text-color);
     }
     

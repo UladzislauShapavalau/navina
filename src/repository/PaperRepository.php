@@ -5,15 +5,16 @@ require_once __DIR__ . '/../models/Paper.php';
 
 class PaperRepository extends Repository
 {
-    public function getPaper()
+    public function getPapers(int $limit = null)
     {
         $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path 
             FROM public.paper
-            LEFT JOIN public.shops shop ON shop.id_shop = paper.id_shop
+            LEFT JOIN public.shops shop ON shop.id_shop = paper.id_shop LIMIT :limit
         ');
 
+        $stmt->bindParam(':limit', $limit);
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -29,7 +30,6 @@ class PaperRepository extends Repository
 
     public function getById(int $id): ?Paper
     {
-        $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path 
             FROM public.paper
@@ -39,8 +39,7 @@ class PaperRepository extends Repository
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $result = $result[0];
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return new Paper($result['pdf_path'], $result['id_paper'], $result['img_path'], $result['name_shop']);
     }
 }

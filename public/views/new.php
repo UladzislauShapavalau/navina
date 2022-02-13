@@ -19,9 +19,9 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-top">
-                    <div class="header-logo">
+                    <a href="/" class="header-logo">
                         <img src="/public/img/logo-center.svg" alt="" />
-                    </div>
+                    </a>
                     <div class="header-logowanie">
                         <?php if (isset($_COOKIE['user_id'])) : ?>
                             Hello, <?= $user->getName(); ?>
@@ -51,7 +51,7 @@
             <section class="page-container">
                 <div class="cards-wrapper">
                     <?php foreach ($papers as $paper) : ?>
-                        <a class="card" href="/getpaper?id=<?php echo $paper->getId($_GET['id']) ?>">
+                        <a class="card" href="/getpaper?id=<?= $paper->getId($_GET['id']); ?>">
                             <div class=" upper-section">
                                 <img src="<?php echo $paper->getImageLink() ?>" />
                             </div>
@@ -60,7 +60,7 @@
                                     <img src="/public/img/arrow.svg" />
                                 </div>
                                 <div class="info-container">
-                                    <span class="shop-name"><?php echo $paper->getShopName() ?></span>
+                                    <span class="shop-name"><?= $paper->getShopName(); ?></span>
                                     <span>9.11 - 4.12</span>
                                 </div>
                             </div>

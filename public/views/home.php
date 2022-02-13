@@ -19,9 +19,9 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-top">
-                    <div class="header-logo">
+                    <a href="/" class="header-logo">
                         <img src="/public/img/logo-center.svg" alt="" />
-                    </div>
+                    </a>
                     <div class="header-logowanie">
                         <?php if (isset($_COOKIE['user_id'])) : ?>
                             Hello, <?= $user->getName(); ?>
@@ -57,62 +57,22 @@
                     <a>Najnowsze gazetki</a>
                 </div>
                 <div class="cards-wrapper">
-                    <div class="card">
-                        <div class="upper-section">
-                            <img src="/public/papers/auchan/auchan_1002_1602.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
+                    <?php foreach ($papers as $paper) : ?>
+                        <a class="card" href="/getpaper?id=<?= $paper->getId($_GET['id']); ?>">
+                            <div class=" upper-section">
+                                <img src="<?= $paper->getImageLink() ?>" />
                             </div>
-                            <div class="info-container">
-                                <span class="shop-name">Auchan</span>
-                                <span>10.02 - 16.02</span>
+                            <div class="lower-section">
+                                <div class="image-container">
+                                    <img src="/public/img/arrow.svg" />
+                                </div>
+                                <div class="info-container">
+                                    <span class="shop-name"><?= $paper->getShopName(); ?></span>
+                                    <span>9.11 - 4.12</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="upper-section">
-                            <img src="/public/papers/mediamarkt/mediamarkt_0902_1502.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Mediamarkt</span>
-                                <span>09.02 - 15.02</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="upper-section">
-                            <img src="/public/img/gazetki/biedronka.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
-                                <span>9.11 - 4.12</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="upper-section">
-                            <img src="/public/img/gazetki/biedronka.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
-                                <span>9.11 - 4.12</span>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                    <?php endforeach ?>
                     <a class="btn-more" href="/new">Wi&#281;cej</a>
                 </div>
             </section>
@@ -124,59 +84,21 @@
                     <a>Sklepy</a>
                 </div>
                 <div class="cards-wrapper">
-                    <div class="card-shop">
-                        <div class="upper-section">
-                            <img src="/public/img/shop/Biedronka-logo.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
+                    <?php foreach ($shops as $shop) : ?>
+                        <a class="card-shop" href="/getshop?id=<?= $shop->getId($_GET['id']); ?>">
+                            <div class=" upper-section">
+                                <img src="<?= $shop->getImageLink() ?>" />
                             </div>
-                            <div class="info-container">
-                                <span class="shop-name">Biedronka</span>
+                            <div class="lower-section">
+                                <div class="image-container">
+                                    <img src="/public/img/arrow.svg" />
+                                </div>
+                                <div class="info-container">
+                                    <span class="shop-name"><?= $shop->getShopName(); ?></span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card-shop">
-                        <div class="upper-section">
-                            <img src="/public/img/shop/castorama_logo.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Castorama</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-shop">
-                        <div class="upper-section">
-                            <img src="/public/img/shop/Lidl-Logo.png" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Lidl</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-shop">
-                        <div class="upper-section">
-                            <img src="/public/img/shop/rossman_logo.jpg" />
-                        </div>
-                        <div class="lower-section">
-                            <div class="image-container">
-                                <img src="/public/img/arrow.svg" />
-                            </div>
-                            <div class="info-container">
-                                <span class="shop-name">Rossman</span>
-                            </div>
-                        </div>
-                    </div>
-
+                        </a>
+                    <?php endforeach ?>
                     <a class="btn-more" href="/shops">Wi&#281;cej</a>
                 </div>
             </section>

@@ -17,5 +17,6 @@ Router::get('logout', 'SecurityController');
 Router::post('login', 'SecurityController');
 Router::post('registration', 'SecurityController');
 Router::get('getpaper', 'DefaultController');
+Router::get('getshop', 'DefaultController');
 
 Router::run($path, $method);

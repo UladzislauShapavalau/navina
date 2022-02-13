@@ -1,23 +1,16 @@
 <?php
 
-class Paper
+class Shop
 {
-    private $pdfLink;
     private $id;
     private $imageLink;
     private $shopName;
 
-    public function __construct(string $pdfLink, string $id, string $imageLink, string $shopName)
+    public function __construct(string $id, string $imageLink, string $shopName)
     {
-        $this->pdfLink = $pdfLink;
         $this->id = $id;
         $this->imageLink = $imageLink;
         $this->shopName = $shopName;
-    }
-
-    public function getPdfPath()
-    {
-        return $this->pdfLink;
     }
 
     public function getId()
