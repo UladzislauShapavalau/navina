@@ -150,6 +150,7 @@ font-size: 18px;
 .lower-section {
     display: flex;
     align-items: center;
+    margin-top: 6px;
 }
 
 .info-container {
@@ -220,6 +221,7 @@ font-size: 18px;
     background-size: cover;
     background-position: center;
     color: var(--secondary-text-color);
+    text-decoration: none;
 }
 .main {
     flex-grow: 1 auto;

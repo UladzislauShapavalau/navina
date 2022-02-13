@@ -84,6 +84,18 @@ class DefaultController extends AppController
         $this->render('paper', ['user' => $this->getUser(), 'paper' => $paperRepository->getById($_GET['id'])]);
     }
 
+    public function getshop()
+    {
+        $paperRepository = new PaperRepository();
+        $this->render('shop', ['user' => $this->getUser(), 'papers' => $paperRepository->getShopPapers($_GET['id'])]);
+    }
+
+    public function getcategory()
+    {
+        $paperRepository = new PaperRepository();
+        $this->render('category', ['user' => $this->getUser(), 'papers' => $paperRepository->getCategoryPapers($_GET['id'])]);
+    }
+
     private function getUser(): ?User
     {
         $userRepository = new UserRepository();

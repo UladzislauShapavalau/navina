@@ -28,6 +28,52 @@ class PaperRepository extends Repository
         return $papers;
     }
 
+    public function getShopPapers(int $id)
+    {
+        $stmt = $this->database->connect()->prepare(
+            '
+        SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path 
+        FROM public.paper
+        LEFT JOIN public.shops shop ON shop.id_shop = paper.id_shop
+        WHERE shop.id_shop = :id'
+        );
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $papers = [];
+
+        if ($result) {
+            foreach ($result as $row) {
+                $papers[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop']);
+            }
+        }
+        return $papers;
+    }
+
+    public function getCategoryPapers(int $id)
+    {
+        $stmt = $this->database->connect()->prepare(
+            '
+        SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path 
+        FROM public.paper
+        LEFT JOIN public.shops shop ON shop.id_shop = paper.id_shop
+        WHERE shop.id_category = :id'
+        );
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $papers = [];
+
+        if ($result) {
+            foreach ($result as $row) {
+                $papers[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop']);
+            }
+        }
+        return $papers;
+    }
+
     public function getById(int $id): ?Paper
     {
         $stmt = $this->database->connect()->prepare('

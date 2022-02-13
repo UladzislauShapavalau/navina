@@ -52,7 +52,7 @@
                 <div class="name-block">
                 </div>
                 <div class="cards-wrapper">
-                    <div class="card-categoies">
+                    <a href="/getcategory?id=1" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/budowa.png" />
                         </div>
@@ -64,8 +64,8 @@
                                 <span class="cat-name">Budowanie</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=2" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/cosmetic.png" />
                         </div>
@@ -77,8 +77,8 @@
                                 <span class="cat-name">Drogerie</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=3" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/books.png" />
                         </div>
@@ -90,8 +90,8 @@
                                 <span class="cat-name">Kioski i saloniki</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=4" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/kitchen.png" />
                         </div>
@@ -103,8 +103,8 @@
                                 <span class="cat-name">Kuchnia</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=5" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/meble.png" />
                         </div>
@@ -116,8 +116,8 @@
                                 <span class="cat-name">Meble</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=6" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/moda.png" />
                         </div>
@@ -129,8 +129,8 @@
                                 <span class="cat-name">Moda</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=7" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/agd.png" />
                         </div>
@@ -142,8 +142,8 @@
                                 <span class="cat-name">RTV AGD IT</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=8" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/supermarket.png" />
                         </div>
@@ -155,8 +155,8 @@
                                 <span class="cat-name">Supermarkety</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-categoies">
+                    </a>
+                    <a href="/getcategory?id=9" class="card-categoies">
                         <div class="upper-section">
                             <img src="/public/img/categories/zoo.png" />
                         </div>
@@ -168,7 +168,7 @@
                                 <span class="cat-name">Zoologiczne</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </section>
         </section>
