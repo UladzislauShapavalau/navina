@@ -1,41 +1,47 @@
-# _Novina_
+# _Novina_ - gazetki promocyjne najbardziej popularnych sklepów w jednym, wygodnym miejscu.
 
-#### Gazetki promocyjne najbardziej popularnych sklep?w w jednym, wygodnym miejscu.
 
----
 
-## G??wna strona zawiera:
-- Cztery najnowsze gazetki i przycisk 'Wi?cej', kt?ry przenosi u?ytkownika do strony ze wszestkimi gazetkrami.
-- Cztery sklepy i przycisk 'Wi?cej', kt?ry przenosi u?ytkownika do strony ze wszestkimi sklepami.
+### Główna strona zawiera:
+- Cztery najnowsze gazetki i przycisk 'Więcej', który przenosi użytkownika do strony ze wszestkimi gazetkrami.
+- Cztery sklepy i przycisk 'Więcej', który przenosi użytkownika do strony ze wszestkimi sklepami.
 
 ![](public/mdimg/main.png)
 
 # Menu aplikacji 
-## Najnowsze 
-Strona ze wszystkimi gazetkami. Po wybraniu gazetki aplikacja wy?wietli jej zawarto??.
+### Najnowsze 
+Strona ze wszystkimi gazetkami. Po wybraniu gazetki aplikacja wyświetli jej zawartość.
 ![](public/mdimg/new.png)
 
-## Sklepy
-Strona ze wszystkimi sklepami. Klikaj?c na konkretny sklep, aplikacja poka?e gazetki sklepu. Po wybraniu gazetki aplikacja wy?wietli jej zawarto??.
+### Sklepy
+Strona ze wszystkimi sklepami. Klikając na konkretny sklep, aplikacja pokaże gazetki sklepu. Po wybraniu gazetki aplikacja wyświetli jej zawartość.
 
 ![](public/mdimg/shop.png)
 
-## Ulubione
-Strona poka?e gazetki tych sklep?w, kt?rych u?ytkownik obserwuje. U?ytkownik musi my? zalogowany.
+### Ulubione
+Strona pokaże gazetki tych sklepów, których użytkownik obserwuje. Użytkownik musi być zalogowany.
 
-## Kategorie
-Na strone znajduje si? r?zne kategorie. Po wybraniu kategorii aplikacja wy?wietli gazetki sklep?w, pasuj?cych do kategorii. Po wybraniu gazetki aplikacja wy?wietli jej zawarto??.
+### Kategorie
+Na strone znajduje się rózne kategorie. Po wybraniu kategorii aplikacja wyświetli gazetki sklepów, pasujących do kategorii. Po wybraniu gazetki aplikacja wyświetli jej zawartość.
 
 ![](public/mdimg/categories.png)
 
 ---
-## Logowanie/Rejestracja
-Ka?da strona na g?rze zawiera przycisk 'Zaloguj si?'. Po klikni?ciu u?ytkownika przenosi do strony logowania.
+# Strona z wybraną gazetką
+![](public/mdimg/paper1.png)
+Jest możliwość zwiększenia stron.
+
+![](public/mdimg/paper2.png)
+
+
+
+### Logowanie/Rejestracja
+Każda strona na górze zawiera przycisk 'Zaloguj się'. Po klikniściu użytkownika przenosi do strony logowania.
 
 ![](public/mdimg/login.png)
 
-Je?li u?ytkownik nie posiada konta, to naciska na 'Za??? konto'.
-Po klikni?ciu u?ytkownika przenosi do strony rejestracji.
+Jeśli użytkownik nie posiada konta, to naciska na 'Załóż konto'.
+Po kliknięciu użytkownika przenosi do strony rejestracji.
 
 ![](public/mdimg/reg.png)
 
