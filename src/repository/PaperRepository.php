@@ -5,11 +5,23 @@ require_once __DIR__ . '/../models/Paper.php';
 
 class PaperRepository extends Repository
 {
-    public function getPapers(int $limit = null)
+    public function formatData(array $data)
     {
         $result = [];
+        foreach ($data as $row) {
+            $dateStart = date_create($row['date_start']);
+            $dateEnd = date_create($row['date_end']);
+            $result[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop'], date_format($dateStart, 'd/m'), date_format($dateEnd, 'd/m'));
+        }
+
+        return $result;
+    }
+
+    public function getPapers(int $limit = null)
+    {
+
         $stmt = $this->database->connect()->prepare('
-            SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path 
+            SELECT paper.date_start, paper.date_end, paper.id_paper, shop.name_shop, paper.pdf_path, paper.img_path
             FROM public.paper
             LEFT JOIN public.shops shop ON shop.id_shop = paper.id_shop LIMIT :limit
         ');
@@ -18,12 +30,9 @@ class PaperRepository extends Repository
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $papers = [];
 
         if ($result) {
-            foreach ($result as $row) {
-                $papers[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop']);
-            }
+            $papers = $this->formatData($result);
         }
         return $papers;
     }
@@ -41,12 +50,9 @@ class PaperRepository extends Repository
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $papers = [];
 
         if ($result) {
-            foreach ($result as $row) {
-                $papers[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop']);
-            }
+            $papers = $this->formatData($result);
         }
         return $papers;
     }
@@ -64,12 +70,9 @@ class PaperRepository extends Repository
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $papers = [];
 
         if ($result) {
-            foreach ($result as $row) {
-                $papers[] = new Paper($row['pdf_path'], $row['id_paper'], $row['img_path'], $row['name_shop']);
-            }
+            $papers = $this->formatData($result);
         }
         return $papers;
     }
@@ -85,7 +88,10 @@ class PaperRepository extends Repository
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return new Paper($result['pdf_path'], $result['id_paper'], $result['img_path'], $result['name_shop']);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($result) {
+            $papers = $this->formatData($result);
+        }
+        return $papers[0];
     }
 }

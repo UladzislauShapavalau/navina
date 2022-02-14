@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="info-container">
                                     <span class="shop-name"><?= $paper->getShopName(); ?></span>
-                                    <span>9.11 - 4.12</span>
+                                    <span><?= $paper->getDateStart(); ?> - <?= $paper->getDateEnd(); ?></span>
                                 </div>
                             </div>
                         </a>

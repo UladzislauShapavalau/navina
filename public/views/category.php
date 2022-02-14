@@ -50,22 +50,26 @@
         <section class="section">
             <section class="page-container">
                 <div class="cards-wrapper">
-                    <?php foreach ($papers as $paper) : ?>
-                        <a class="card" href="/getpaper?id=<?= $paper->getId($_GET['id']); ?>">
-                            <div class=" upper-section">
-                                <img src="<?= $paper->getImageLink() ?>" />
-                            </div>
-                            <div class="lower-section">
-                                <div class="image-container">
-                                    <img src="/public/img/arrow.svg" />
+                    <?php if (isset($papers)) : ?>
+                        <?php foreach ($papers as $paper) : ?>
+                            <a class="card" href="/getpaper?id=<?= $paper->getId($_GET['id']); ?>">
+                                <div class=" upper-section">
+                                    <img src="<?= $paper->getImageLink() ?>" />
                                 </div>
-                                <div class="info-container">
-                                    <span class="shop-name"><?= $paper->getShopName(); ?></span>
-                                    <span>9.11 - 4.12</span>
+                                <div class="lower-section">
+                                    <div class="image-container">
+                                        <img src="/public/img/arrow.svg" />
+                                    </div>
+                                    <div class="info-container">
+                                        <span class="shop-name"><?= $paper->getShopName(); ?></span>
+                                        <span>9.11 - 4.12</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    <?php endforeach ?>
+                            </a>
+                        <?php endforeach ?>
+                    <?php else : ?>
+                        <div>There are no papers</div>
+                    <?php endif; ?>
                 </div>
             </section>
         </section>

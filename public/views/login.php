@@ -19,7 +19,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-top">
-                    <div class="header-logo">
+                    <div class="header-logo-login">
                         <img src="/public/img/logo-center.svg" alt="" />
                     </div>
                     <!-- <div class="header-logowanie">
