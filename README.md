@@ -35,7 +35,7 @@ Jest możliwość zwiększenia stron.
 
 
 
-### Logowanie/Rejestracja
+# Logowanie/Rejestracja
 Każda strona na górze zawiera przycisk 'Zaloguj się'. Po klikniściu użytkownika przenosi do strony logowania.
 
 ![](public/mdimg/login.png)
@@ -45,3 +45,6 @@ Po kliknięciu użytkownika przenosi do strony rejestracji.
 
 ![](public/mdimg/reg.png)
 
+Po logowaniu jest możliwość wylogować się.
+
+![](public/mdimg/logout.png)
