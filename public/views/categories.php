@@ -25,6 +25,9 @@
                     <div class="header-logowanie">
                         <?php if (isset($_COOKIE['user_id'])) : ?>
                             Hello, <?= $user->getName(); ?>
+                            <a href="/logout">
+                                <img class="logout-icon" src="/public/img/logout-icon.png" alt="">
+                            </a>
                         <?php else : ?>
                             <a class="header-link" href="/login">
                                 <img class="user-icon" src="/public/img/user.png" alt="" />

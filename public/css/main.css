@@ -50,6 +50,16 @@ main {
     
 }
 
+.logout-icon {
+    margin-left: 8px;
+    margin-bottom: 2px;
+    width: 13px;
+    height: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+}
+
 .header-link {
     text-decoration: none;
     display: flex;
